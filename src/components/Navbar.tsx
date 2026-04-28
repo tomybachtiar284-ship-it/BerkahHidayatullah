@@ -2,15 +2,17 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronRight } from 'lucide-react';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const { t, lang, setLang } = useLanguage();
 
   const links = [
-    { name: 'Beranda', path: '/' },
-    { name: 'Profil Perusahaan', path: '/profile' },
-    { name: 'E-Katalog', path: '/catalog' },
+    { name: t('nav.home'), path: '/' },
+    { name: t('nav.about'), path: '/profile' },
+    { name: t('nav.catalog'), path: '/catalog' },
   ];
 
   return (
@@ -25,7 +27,6 @@ export default function Navbar() {
             />
           </Link>
 
-          {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
             {links.map((link) => (
               <Link
@@ -40,6 +41,23 @@ export default function Navbar() {
                 {link.name}
               </Link>
             ))}
+            
+            <div className="flex items-center space-x-2 border-l border-slate-200 pl-6">
+              <button 
+                onClick={() => setLang('id')}
+                className={`text-[12px] font-bold transition-colors ${lang === 'id' ? 'text-[#ff8a00]' : 'text-slate-400 hover:text-slate-600'}`}
+              >
+                ID
+              </button>
+              <span className="text-slate-300">|</span>
+              <button 
+                onClick={() => setLang('en')}
+                className={`text-[12px] font-bold transition-colors ${lang === 'en' ? 'text-[#ff8a00]' : 'text-slate-400 hover:text-slate-600'}`}
+              >
+                EN
+              </button>
+            </div>
+
             <a
               href="https://wa.me/6281245613771"
               target="_blank"
@@ -47,7 +65,7 @@ export default function Navbar() {
               style={{ backgroundColor: '#ff8a00' }}
               className="text-white px-6 py-2.5 text-[12px] font-bold tracking-wide hover:opacity-90 transition-opacity flex items-center gap-2 rounded-full shadow-md"
             >
-              Hubungi Kami
+              {t('nav.contact')}
               <ChevronRight className="w-4 h-4" />
             </a>
           </div>
@@ -87,6 +105,21 @@ export default function Navbar() {
                   {link.name}
                 </Link>
               ))}
+              <div className="flex items-center space-x-4 px-4 py-3 border-b border-slate-50">
+                <button 
+                  onClick={() => { setLang('id'); setIsOpen(false); }}
+                  className={`text-[12px] font-bold transition-colors ${lang === 'id' ? 'text-[#ff8a00]' : 'text-slate-400'}`}
+                >
+                  ID
+                </button>
+                <span className="text-slate-300">|</span>
+                <button 
+                  onClick={() => { setLang('en'); setIsOpen(false); }}
+                  className={`text-[12px] font-bold transition-colors ${lang === 'en' ? 'text-[#ff8a00]' : 'text-slate-400'}`}
+                >
+                  EN
+                </button>
+              </div>
               <a
                 href="https://wa.me/6281245613771"
                 target="_blank"
@@ -95,7 +128,7 @@ export default function Navbar() {
                 style={{ backgroundColor: '#ff8a00' }}
                 className="block mx-4 mt-4 text-center text-white px-5 py-3 text-[12px] font-bold tracking-widest hover:opacity-90 rounded-full shadow-md"
               >
-                Hubungi Kami
+                {t('nav.contact')}
               </a>
             </div>
           </motion.div>
