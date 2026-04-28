@@ -22,6 +22,11 @@ export const en = {
         { title: "Quality & Excellence", desc: "Committed to using the best materials and methods for satisfactory results." },
         { title: "Professional Team", desc: "Managed by experienced experts and management in their respective fields." },
         { title: "Multi-sector", desc: "One-stop solution for various needs: Construction, Trading, Farming, and Event Services." }
+      ],
+      numbers: [
+        { value: 150, suffix: "+", label: "Projects Completed" },
+        { value: 50, suffix: "+", label: "Corporate Partners" },
+        { value: 10, suffix: "+", label: "Years Experience" }
       ]
     },
     services: {

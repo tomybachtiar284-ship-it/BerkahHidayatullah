@@ -4,6 +4,7 @@ import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import IndonesiaMap from '../components/IndonesiaMap';
+import RollingCounter from '../components/RollingCounter';
 
 export default function Home() {
   const { t } = useLanguage();
@@ -23,6 +24,7 @@ export default function Home() {
   };
   
   const statsItems = t('home.stats.items') || [];
+  const statsNumbers = t('home.stats.numbers') || [];
   const servicesItems = t('home.services.items') || [];
   const projectsItems = t('home.projects.items') || [];
 
@@ -118,7 +120,20 @@ export default function Home() {
                   <Star className="w-5 h-5 fill-current" />
                 </div>
               </div>
-              <p className="text-xs text-slate-500 font-medium">{t('home.stats.trusted')}</p>
+              <p className="text-xs text-slate-500 font-medium mb-10">{t('home.stats.trusted')}</p>
+
+              {/* Animated Numbers */}
+              <div className="grid grid-cols-2 gap-6 pt-6 border-t border-slate-200">
+                {statsNumbers.map((stat: any, idx: number) => (
+                  <div key={idx}>
+                    <div className="text-3xl font-black text-slate-900 flex items-center mb-1">
+                      <RollingCounter value={stat.value} duration={2} />
+                      <span className="text-[#ff8a00]">{stat.suffix}</span>
+                    </div>
+                    <p className="text-xs text-slate-500 font-bold uppercase tracking-wider">{stat.label}</p>
+                  </div>
+                ))}
+              </div>
             </div>
 
             {/* Right side numbered boxes */}

@@ -22,6 +22,11 @@ export const id = {
         { title: "Mutu & Kualitas", desc: "Berkomitmen menggunakan material dan metode terbaik untuk hasil yang memuaskan." },
         { title: "Tim Profesional", desc: "Dikelola oleh tenaga ahli dan manajemen yang berpengalaman di bidangnya." },
         { title: "Multi-sektor", desc: "Satu pintu untuk berbagai kebutuhan: Konstruksi, Dagang, Tani, dan Jasa Event." }
+      ],
+      numbers: [
+        { value: 150, suffix: "+", label: "Proyek Selesai" },
+        { value: 50, suffix: "+", label: "Mitra Korporat" },
+        { value: 10, suffix: "+", label: "Tahun Pengalaman" }
       ]
     },
     services: {

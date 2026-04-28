@@ -6,6 +6,7 @@
 import { BrowserRouter, Routes, Route, ScrollRestoration } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import FloatingWhatsApp from './components/FloatingWhatsApp';
 import Home from './pages/Home';
 import Profile from './pages/Profile';
 import Catalog from './pages/Catalog';
@@ -30,6 +31,7 @@ export default function App() {
             </Routes>
           </main>
           <Footer />
+          <FloatingWhatsApp />
         </div>
       </BrowserRouter>
     </LanguageProvider>
