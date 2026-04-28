@@ -40,10 +40,90 @@ export const en = {
       ],
       cta: "Project Details"
     },
+    coreServices: {
+      label: "Our Core Services",
+      title: "Two Main Pillars of Our Business",
+      desc: "CV Berkah Hidayatullah currently focuses its operations on two flagship areas that have proven to deliver real value to clients.",
+      items: [
+        {
+          icon: "wrench",
+          badge: "Service #1",
+          image: "/maintenance.png",
+          title: "Heavy Equipment Maintenance & Overhaul",
+          desc: "We are a reliable partner for maintaining the performance and reliability of your heavy equipment fleet. From routine maintenance and emergency repairs to comprehensive engine overhauls, our certified mechanic team ensures every unit operates optimally and minimizes costly downtime.",
+          points: [
+            "Preventive & Corrective Maintenance",
+            "Comprehensive Engine Overhaul",
+            "Genuine Spare Parts",
+            "On-Site Service & Fast Response",
+            "Annual Maintenance Contract (AMC)"
+          ],
+          cta: "Learn More"
+        },
+        {
+          icon: "box",
+          badge: "Service #2",
+          image: "/pengadaan.png",
+          title: "Goods & Services Procurement",
+          desc: "As a trusted procurement partner, we provide a one-stop solution for various government and private sector needs. From building materials, medical devices, to office stationery, we ensure an efficient, transparent procurement process that complies with applicable regulations.",
+          points: [
+            "Building Materials & Construction",
+            "Medical Devices & Pharmaceuticals",
+            "Office Stationery (ATK)",
+            "Government Procurement (E-Purchasing)",
+            "Integrated Supply Chain"
+          ],
+          cta: "Learn More"
+        }
+      ]
+    },
+    clients: {
+      label: "Partnerships",
+      title: "Trusted by Institutions & Companies",
+      desc: "We are proud to have collaborated with and provided the best services to various government agencies, state-owned enterprises, and leading private companies."
+    },
     ctaFooter: {
       title: "Contact Us Today",
       desc: "Discuss your project needs with the professional team at CV Berkah Hidayatullah.",
       button: "Contact Our Team"
+    },
+    contactForm: {
+      label: "B2B Consultation",
+      title: "Start Your Project Discussion",
+      desc: "Our expert team is ready to help analyze and provide the best solutions for your company's procurement and heavy equipment maintenance needs.",
+      name: "Full Name",
+      company: "Company / Institution Name",
+      service: "Service of Interest",
+      message: "Need Details / Message",
+      submit: "Send Request (WhatsApp)",
+      options: {
+        maintenance: "Heavy Equipment Maintenance & Overhaul",
+        procurement: "Goods & Services Procurement",
+        other: "Other Services & Consultation"
+      }
+    },
+    coverage: {
+      label: "Service Area",
+      title: "We Are Ready to Serve All of Indonesia",
+      desc: "With a full commitment to supporting national development, we are open to operating throughout all regions of Indonesia.",
+      national: {
+        badge: "National Reach",
+        title: "All of Indonesia",
+        desc: "We are ready to be present and collaborate on projects across the entire archipelago, from Sabang to Merauke."
+      },
+      regional: {
+        badge: "Current Operational Focus",
+        title: "Sulawesi Island",
+        desc: "We are currently focused and domiciled in Sulawesi, serving various projects with deep local knowledge.",
+        provinces: [
+          "North Sulawesi",
+          "Central Sulawesi",
+          "South Sulawesi",
+          "Southeast Sulawesi",
+          "West Sulawesi",
+          "Gorontalo"
+        ]
+      }
     }
   },
   profile: {
@@ -108,10 +188,68 @@ export const en = {
   },
   catalog: {
     title: "Berkah Hidayatullah E-Catalog",
-    desc: "A list of our capabilities, service providers, and retail products covering various critical sectors in the operational area.",
+    desc: "Our flagship services focus on two core areas: Heavy Equipment Maintenance & Overhaul and Goods & Services Procurement for various industries.",
+    featuredLabel: "Main Services",
+    otherLabel: "Other Supporting Services",
     detail: "View Details",
     order: "Order / Inquire Price",
     noDetail: "Detailed information for this service is not yet available. Please contact us for more information.",
+    featured: [
+      {
+        id: 'f1',
+        badge: 'Featured Service #1',
+        title: 'Heavy Equipment Maintenance & Overhaul',
+        tagline: 'Professional Maintenance Solutions for Your Heavy Equipment Fleet',
+        image: '/maintenance.png',
+        highlights: [
+          'Preventive & Corrective Maintenance',
+          'Comprehensive Engine Overhaul',
+          'Genuine Spare Parts',
+          'On-Site Service & Fast Response',
+          'Certified Mechanic Team',
+          'Periodic Maintenance Contract'
+        ],
+        longDesc: [
+          "To support the smooth operation of capital-intensive industries, Berkah Hidayatullah is present as a trusted strategic partner in providing comprehensive heavy equipment overhaul and maintenance services.",
+          "Optimally functioning heavy equipment is the backbone of construction and mining project success. Every minute of downtime means real losses for your project. We ensure your vital assets are always in prime condition, ready to operate whenever needed.",
+          "Our services cover scheduled routine maintenance (preventive maintenance), responsive emergency repairs (corrective maintenance), and comprehensive engine overhaul processes to significantly extend the service life of your heavy equipment.",
+          "We have a team of certified mechanics and technical experts experienced in handling various world-renowned heavy equipment brands and types, from excavators, bulldozers, and motor graders, to dump trucks and cranes of various capacities.",
+          "Our overhaul process is carried out in a modern workshop facility equipped with advanced and high-precision diagnostic equipment to accurately identify any potential damage before it becomes a major problem.",
+          "We are committed to only using certified genuine parts and high-quality lubricants in every repair job to ensure long-term engine durability and performance.",
+          "To minimize downtime even at remote project sites, we provide on-site repair services with a team ready to move quickly and bring all necessary equipment.",
+          "Every unit we have handled will go through a series of strict and standardized functional tests and quality control processes before being returned to the operational area to guarantee equipment reliability.",
+          "We also offer Annual Maintenance Contract programs that can be fully customized to fit the needs and working hours of your heavy equipment, providing budget certainty and peace of mind for project management.",
+          "Entrust your heavy equipment maintenance and overhaul to the experts. Together with us, achieve maximum project productivity and profitability with a fleet that is always reliable, efficient, and ready for full operation."
+        ]
+      },
+      {
+        id: 'f2',
+        badge: 'Featured Service #2',
+        title: 'Goods & Services Procurement',
+        tagline: 'Integrated Procurement Solutions for Industry and Government Needs',
+        image: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=1200&auto=format&fit=crop',
+        highlights: [
+          'Building Materials & Construction',
+          'Medical Devices & Pharmaceuticals',
+          'Office Stationery (ATK)',
+          'Industrial Spare Parts',
+          'Government Procurement (E-Purchasing)',
+          'Integrated Supply Chain'
+        ],
+        longDesc: [
+          "Berkah Hidayatullah is present as a trusted strategic partner in comprehensive goods and services procurement services, serving the needs of various government agencies and private companies throughout our operational area.",
+          "We understand that efficient, transparent, and timely procurement is key to the smooth operation of every organization. With extensive experience and a wide network, we are here as a reliable one-stop procurement solution.",
+          "In the category of building materials and construction materials, we provide cement, steel, glass, metals, pipes, and various other structural materials that meet SNI and international quality standards, directly from trusted distributors and manufacturers.",
+          "For the healthcare sector's needs, we serve the procurement of primary medical devices, essential medicines, and officially licensed pharmaceutical products that are safe and effective, with a storage management system that meets Cold Chain Management standards.",
+          "Our Office Stationery (ATK) procurement service is specifically designed to support the efficiency and smooth administration of government agencies and private corporations, from daily needs to large-scale procurement.",
+          "We also serve the procurement of spare parts and industrial equipment, including machine components, personal protective equipment (PPE), and other technical supplies needed by various types of industries.",
+          "Our integrated, data-driven supply chain management system ensures adequate stock availability and timely delivery directly to the destination without delays.",
+          "We have a strong track record in meeting government procurement requirements, including E-Purchasing processes and government goods/services tender procurement in accordance with applicable regulations.",
+          "Our commitment to legality and transparency makes every procurement transaction fully accountable. We ensure every process runs in accordance with applicable laws and regulations.",
+          "With integrated, competitive, and client-satisfaction-oriented procurement services, we are ready to be your long-term partner in meeting every operational and project need with unmatched quality standards."
+        ]
+      }
+    ],
     categories: {
       all: "All",
       konstruksi: "Construction",

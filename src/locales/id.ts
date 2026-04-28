@@ -40,10 +40,90 @@ export const id = {
       ],
       cta: "Detail Proyek"
     },
+    coreServices: {
+      label: "Fokus Layanan Kami",
+      title: "Dua Pilar Utama Bisnis Kami",
+      desc: "CV Berkah Hidayatullah saat ini memfokuskan operasional pada dua bidang unggulan yang telah terbukti memberikan nilai tambah nyata bagi klien.",
+      items: [
+        {
+          icon: "wrench",
+          badge: "Layanan #1",
+          image: "/maintenance.png",
+          title: "Maintenance & Overhaul Alat Berat",
+          desc: "Kami hadir sebagai mitra andal untuk menjaga performa dan keandalan armada alat berat Anda. Mulai dari perawatan rutin, perbaikan darurat, hingga overhaul mesin menyeluruh, tim mekanik bersertifikat kami siap memastikan setiap unit bekerja optimal dan meminimalisir downtime yang merugikan proyek Anda.",
+          points: [
+            "Preventive & Corrective Maintenance",
+            "Overhaul Mesin Menyeluruh",
+            "Suku Cadang Asli (Genuine Parts)",
+            "Layanan On-Site & Respons Cepat",
+            "Kontrak Pemeliharaan Berkala (AMC)"
+          ],
+          cta: "Selengkapnya"
+        },
+        {
+          icon: "box",
+          badge: "Layanan #2",
+          image: "/pengadaan.png",
+          title: "Pengadaan Barang & Jasa",
+          desc: "Sebagai mitra pengadaan terpercaya, kami menyediakan solusi satu atap untuk berbagai kebutuhan instansi pemerintah maupun swasta. Dari bahan bangunan, alat kesehatan, hingga ATK, kami memastikan proses pengadaan yang efisien, transparan, dan sesuai regulasi yang berlaku.",
+          points: [
+            "Bahan Bangunan & Material Konstruksi",
+            "Alat Kesehatan & Farmasi",
+            "Alat Tulis Kantor (ATK)",
+            "Pengadaan Pemerintah (E-Purchasing)",
+            "Rantai Pasok Terintegrasi"
+          ],
+          cta: "Selengkapnya"
+        }
+      ]
+    },
+    clients: {
+      label: "Kemitraan",
+      title: "Dipercaya oleh Institusi & Perusahaan",
+      desc: "Kami bangga telah berkolaborasi dan memberikan layanan terbaik bagi berbagai instansi pemerintah, BUMN, dan perusahaan swasta terkemuka."
+    },
     ctaFooter: {
       title: "Hubungi Kami Hari Ini",
       desc: "Diskusikan kebutuhan proyek Anda dengan tim profesional CV Berkah Hidayatullah.",
       button: "Hubungi Tim Kami"
+    },
+    contactForm: {
+      label: "Konsultasi B2B",
+      title: "Mulai Diskusi Proyek Anda",
+      desc: "Tim ahli kami siap membantu menganalisis dan memberikan solusi terbaik untuk kebutuhan pengadaan dan pemeliharaan alat berat instansi Anda.",
+      name: "Nama Lengkap",
+      company: "Nama Perusahaan / Instansi",
+      service: "Layanan yang Diminati",
+      message: "Detail Kebutuhan / Pesan",
+      submit: "Kirim Permintaan (WhatsApp)",
+      options: {
+        maintenance: "Maintenance & Overhaul Alat Berat",
+        procurement: "Pengadaan Barang & Jasa",
+        other: "Layanan & Konsultasi Lainnya"
+      }
+    },
+    coverage: {
+      label: "Wilayah Layanan",
+      title: "Kami Siap Hadir di Seluruh Indonesia",
+      desc: "Dengan komitmen penuh untuk mendukung pembangunan nasional, kami membuka diri untuk beroperasi di seluruh wilayah Indonesia.",
+      national: {
+        badge: "Jangkauan Nasional",
+        title: "Seluruh Indonesia",
+        desc: "Kami siap hadir dan berkolaborasi dalam proyek-proyek di seluruh wilayah Nusantara, dari Sabang hingga Merauke."
+      },
+      regional: {
+        badge: "Fokus Operasional Saat Ini",
+        title: "Pulau Sulawesi",
+        desc: "Saat ini kami berfokus dan berdomisili di Sulawesi, melayani berbagai proyek dengan pengetahuan lokal yang mendalam.",
+        provinces: [
+          "Sulawesi Utara",
+          "Sulawesi Tengah",
+          "Sulawesi Selatan",
+          "Sulawesi Tenggara",
+          "Sulawesi Barat",
+          "Gorontalo"
+        ]
+      }
     }
   },
   profile: {
@@ -108,10 +188,68 @@ export const id = {
   },
   catalog: {
     title: "E-Katalog Berkah Hidayatullah",
-    desc: "Daftar kapabilitas, penyedia layanan, dan produk eceran kami mencakup berbagai sektor kritikal di wilayah operasional.",
+    desc: "Layanan unggulan kami berfokus pada dua bidang utama: Maintenance & Overhaul Alat Berat serta Pengadaan Barang dan Jasa untuk berbagai sektor industri.",
+    featuredLabel: "Layanan Utama",
+    otherLabel: "Layanan Pendukung Lainnya",
     detail: "Lihat Detail",
     order: "Pesan / Tanyakan Harga",
     noDetail: "Detail informasi lengkap untuk layanan ini belum tersedia. Silakan hubungi kami untuk informasi lebih lanjut.",
+    featured: [
+      {
+        id: 'f1',
+        badge: 'Layanan Unggulan #1',
+        title: 'Maintenance & Overhaul Alat Berat',
+        tagline: 'Solusi Perawatan Profesional untuk Armada Alat Berat Anda',
+        image: '/maintenance.png',
+        highlights: [
+          'Preventive & Corrective Maintenance',
+          'Overhaul Mesin Menyeluruh',
+          'Suku Cadang Asli (Genuine Parts)',
+          'On-Site Service & Fast Response',
+          'Tim Mekanik Bersertifikat',
+          'Kontrak Pemeliharaan Berkala'
+        ],
+        longDesc: [
+          "Guna mendukung kelancaran operasional industri padat modal, Berkah Hidayatullah hadir sebagai mitra strategis dalam penyediaan jasa overhaul dan maintenance alat berat yang komprehensif dan terpercaya.",
+          "Alat berat yang berfungsi optimal adalah tulang punggung keberhasilan proyek konstruksi dan pertambangan. Setiap menit downtime berarti kerugian nyata bagi proyek Anda. Kami memastikan aset vital Anda selalu dalam kondisi prima, siap beroperasi kapan pun dibutuhkan.",
+          "Layanan kami mencakup perawatan rutin (preventive maintenance) yang terjadwal, perbaikan darurat (corrective maintenance) yang responsif, hingga proses overhaul mesin secara menyeluruh untuk memperpanjang umur pakai alat berat Anda secara signifikan.",
+          "Kami memiliki tim mekanik bersertifikat dan ahli teknis yang berpengalaman menangani berbagai merek dan tipe alat berat ternama dunia, dari ekskavator, buldoser, motor grader, hingga dump truck dan crane dengan berbagai kapasitas.",
+          "Proses overhaul kami dilakukan di fasilitas bengkel (workshop) modern yang dilengkapi dengan peralatan diagnostik canggih dan presisi tinggi untuk mengidentifikasi setiap potensi kerusakan secara akurat sebelum menjadi masalah besar.",
+          "Kami berkomitmen hanya menggunakan suku cadang asli (genuine parts) yang telah tersertifikasi dan pelumas berkualitas tinggi dalam setiap pekerjaan perbaikan untuk menjamin durabilitas dan performa mesin dalam jangka panjang.",
+          "Untuk meminimalkan waktu henti (downtime) di lokasi proyek yang jauh sekalipun, kami menyediakan layanan perbaikan di tempat (on-site service) dengan tim yang siap bergerak cepat dan membawa peralatan yang diperlukan.",
+          "Setiap unit yang telah kami tangani akan melalui serangkaian proses pengujian fungsional (functional test) dan quality control yang ketat dan terstandar sebelum dikembalikan ke area operasional untuk menjamin keandalan alat.",
+          "Kami juga menawarkan program kontrak pemeliharaan berkala (Annual Maintenance Contract) yang dapat dikustomisasi sepenuhnya sesuai dengan kebutuhan dan jam kerja alat berat Anda, memberikan kepastian anggaran dan ketenangan pikiran bagi manajemen proyek.",
+          "Serahkan urusan perawatan dan overhaul alat berat Anda kepada para ahlinya. Bersama kami, raih tingkat produktivitas dan profitabilitas proyek yang maksimal dengan armada yang selalu andal, efisien, dan siap beroperasi penuh."
+        ]
+      },
+      {
+        id: 'f2',
+        badge: 'Layanan Unggulan #2',
+        title: 'Pengadaan Barang & Jasa',
+        tagline: 'Solusi Pengadaan Terpadu untuk Kebutuhan Industri dan Pemerintahan',
+        image: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=1200&auto=format&fit=crop',
+        highlights: [
+          'Bahan Bangunan & Material Konstruksi',
+          'Alat Kesehatan & Farmasi',
+          'Alat Tulis Kantor (ATK)',
+          'Suku Cadang Industri',
+          'Pengadaan Pemerintah (E-Purchasing)',
+          'Rantai Pasok Terintegrasi'
+        ],
+        longDesc: [
+          "Berkah Hidayatullah hadir sebagai mitra strategis terpercaya dalam layanan pengadaan barang dan jasa yang komprehensif, melayani kebutuhan berbagai instansi pemerintah maupun perusahaan swasta di seluruh wilayah operasional kami.",
+          "Kami memahami bahwa proses pengadaan yang efisien, transparan, dan tepat waktu adalah kunci kelancaran operasional setiap organisasi. Dengan pengalaman dan jaringan yang luas, kami hadir sebagai solusi pengadaan satu atap (one-stop procurement) yang dapat diandalkan.",
+          "Dalam kategori bahan bangunan dan material konstruksi, kami menyediakan semen, baja, kaca, logam, pipa, dan berbagai material struktur lainnya yang telah memenuhi standar SNI dan kualitas internasional, langsung dari distributor dan produsen terpercaya.",
+          "Untuk kebutuhan sektor kesehatan, kami melayani pengadaan alat kesehatan primer, obat-obatan esensial, dan produk farmasi berizin resmi yang aman serta efektif, dengan sistem pengelolaan penyimpanan yang memenuhi standar Cold Chain Management.",
+          "Layanan pengadaan Alat Tulis Kantor (ATK) kami dirancang khusus untuk mendukung efisiensi dan kelancaran administrasi perkantoran instansi pemerintah dan korporasi swasta, mulai dari kebutuhan harian hingga pengadaan berskala besar.",
+          "Kami juga melayani pengadaan suku cadang dan perlengkapan industri, termasuk komponen mesin, peralatan keselamatan kerja (APD), hingga perlengkapan teknis lainnya yang dibutuhkan oleh berbagai jenis industri.",
+          "Sistem manajemen rantai pasok (supply chain management) kami yang terintegrasi dan berbasis data memastikan ketersediaan stok yang memadai serta ketepatan waktu pengiriman langsung ke lokasi tujuan tanpa penundaan.",
+          "Kami memiliki rekam jejak yang kuat dalam memenuhi persyaratan pengadaan pemerintah, termasuk proses E-Purchasing dan tender pengadaan barang/jasa pemerintah sesuai peraturan yang berlaku (Perpres 16/2018 jo. 12/2021).",
+          "Komitmen kami terhadap legalitas dan transparansi menjadikan setiap transaksi pengadaan dapat dipertanggungjawabkan secara penuh. Kami memastikan setiap proses berjalan sesuai dengan koridor hukum dan regulasi yang berlaku.",
+          "Dengan layanan pengadaan yang terintegrasi, kompetitif, dan berorientasi pada kepuasan klien, kami siap menjadi mitra jangka panjang Anda dalam memenuhi setiap kebutuhan operasional dan proyek dengan standar kualitas yang tidak tertandingi."
+        ]
+      }
+    ],
     categories: {
       all: "Semua",
       konstruksi: "Konstruksi",

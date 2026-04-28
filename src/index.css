@@ -26,3 +26,8 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "DM Serif Display", ui-serif, Georgia, serif;
   letter-spacing: -0.01em;
 }
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-100% / 2)); }
+}
