@@ -75,8 +75,8 @@ export default function Catalog() {
           <div className="flex-1 h-px bg-gradient-to-r from-[#ff8a00]/30 to-transparent"></div>
         </div>
 
-        {/* Two Big Featured Cards */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-20">
+        {/* Three Big Featured Cards */}
+        <div className="grid lg:grid-cols-3 gap-8 mb-20">
           {featuredItems.map((item, idx) => (
             <motion.div
               key={item.id}

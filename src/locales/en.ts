@@ -47,7 +47,7 @@ export const en = {
     },
     coreServices: {
       label: "Our Core Services",
-      title: "Two Main Pillars of Our Business",
+      title: "Three Main Pillars of Our Business",
       desc: "CV Berkah Hidayatullah currently focuses its operations on two flagship areas that have proven to deliver real value to clients.",
       items: [
         {
@@ -76,7 +76,23 @@ export const en = {
             "Medical Devices & Pharmaceuticals",
             "Office Stationery (ATK)",
             "Government Procurement (E-Purchasing)",
+            "Complete Agricultural Tools",
             "Integrated Supply Chain"
+          ],
+          cta: "Learn More"
+        },
+        {
+          icon: "car",
+          badge: "Service #3",
+          image: "/service-kendaraan.png",
+          title: "Periodic Vehicle Maintenance",
+          desc: "We provide periodic maintenance services for motorized vehicles, both diesel and gasoline engines. Handled directly by Mechanical Engineering experts to ensure your vehicle's performance is always optimal, safe to drive, and components last longer.",
+          points: [
+            "Diesel & Gasoline Vehicle Maintenance",
+            "Optimal Engine Performance",
+            "Longer Lasting Vehicle Components",
+            "Long-Term Cost Savings",
+            "Always Safe Driving"
           ],
           cta: "Learn More"
         }
@@ -193,7 +209,7 @@ export const en = {
   },
   catalog: {
     title: "Berkah Hidayatullah E-Catalog",
-    desc: "Our flagship services focus on two core areas: Heavy Equipment Maintenance & Overhaul and Goods & Services Procurement for various industries.",
+    desc: "Our flagship services focus on three core areas: Heavy Equipment Maintenance, Goods & Services Procurement, and Periodic Vehicle Maintenance.",
     featuredLabel: "Main Services",
     otherLabel: "Other Supporting Services",
     detail: "View Details",
@@ -239,6 +255,7 @@ export const en = {
           'Office Stationery (ATK)',
           'Industrial Spare Parts',
           'Government Procurement (E-Purchasing)',
+          'Complete Agricultural Tools',
           'Integrated Supply Chain'
         ],
         longDesc: [
@@ -252,6 +269,33 @@ export const en = {
           "We have a strong track record in meeting government procurement requirements, including E-Purchasing processes and government goods/services tender procurement in accordance with applicable regulations.",
           "Our commitment to legality and transparency makes every procurement transaction fully accountable. We ensure every process runs in accordance with applicable laws and regulations.",
           "With integrated, competitive, and client-satisfaction-oriented procurement services, we are ready to be your long-term partner in meeting every operational and project need with unmatched quality standards."
+        ]
+      },
+      {
+        id: 'f3',
+        badge: 'Featured Service #3',
+        title: 'Periodic Vehicle Maintenance',
+        tagline: 'Professional Maintenance Solutions for Your Diesel & Gasoline Vehicles',
+        image: '/service-kendaraan.png',
+        highlights: [
+          'Diesel & Gasoline Vehicle Maintenance',
+          'Optimal Engine Performance',
+          'Longer Lasting Vehicle Components',
+          'Long-Term Cost Savings',
+          'Guaranteed Driving Safety',
+          'Handled by Mechanical Engineering Experts'
+        ],
+        longDesc: [
+          "In addition to heavy equipment, Berkah Hidayatullah also provides specialist services for the periodic maintenance of your motorized vehicles, both those using diesel engines and gasoline engines.",
+          "We realize that well-maintained operational and private vehicles are key to the smooth running of your daily mobility. Periodic maintenance prevents sudden breakdowns that cost a lot.",
+          "Our services are managed directly under the supervision of an experienced Mechanical Engineering expert, Mr. Efendi Payuyu, ensuring every vehicle is handled with precise and professional technical standards.",
+          "The main benefit of periodic maintenance with us is engine performance that is always optimal. Engine pull becomes more responsive and fuel consumption is more efficient.",
+          "With routine checks and timely replacement of spare parts, your vehicle's vital components will become much more durable and avoid premature wear and tear.",
+          "Through a small investment in periodic maintenance, you actually save long-term operational costs by avoiding expensive heavy engine repairs (overhaul).",
+          "Safety is our top priority. Braking systems, suspension, electricity, and steering are thoroughly checked so you always feel safe and comfortable when driving in various road conditions.",
+          "We use modern diagnostic equipment to detect hidden problems in injection vehicles and advanced electrical systems.",
+          "From routine oil changes, tune-ups, brake services, to checking the engine cooling system (radiator), everything is done carefully and uses quality fluids/spare parts.",
+          "Entrust your vehicle maintenance to our reliable mechanic team. Prime vehicle, smooth activities, and peace of mind."
         ]
       }
     ],

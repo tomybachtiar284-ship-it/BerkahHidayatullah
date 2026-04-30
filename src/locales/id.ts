@@ -47,7 +47,7 @@ export const id = {
     },
     coreServices: {
       label: "Fokus Layanan Kami",
-      title: "Dua Pilar Utama Bisnis Kami",
+      title: "Tiga Pilar Utama Bisnis Kami",
       desc: "CV Berkah Hidayatullah saat ini memfokuskan operasional pada dua bidang unggulan yang telah terbukti memberikan nilai tambah nyata bagi klien.",
       items: [
         {
@@ -76,7 +76,23 @@ export const id = {
             "Alat Kesehatan & Farmasi",
             "Alat Tulis Kantor (ATK)",
             "Pengadaan Pemerintah (E-Purchasing)",
+            "Alat-Alat Pertanian Lengkap",
             "Rantai Pasok Terintegrasi"
+          ],
+          cta: "Selengkapnya"
+        },
+        {
+          icon: "car",
+          badge: "Layanan #3",
+          image: "/service-kendaraan.png",
+          title: "Perawatan Berkala Kendaraan",
+          desc: "Kami menyediakan layanan perawatan berkala untuk kendaraan bermotor, baik mesin diesel maupun bensin. Ditangani langsung oleh tenaga ahli Mechanical Engineering untuk memastikan performa kendaraan Anda selalu optimal, aman dikendarai, dan komponen lebih awet.",
+          points: [
+            "Perawatan Kendaraan Diesel & Bensin",
+            "Performa Mesin Tetap Optimal",
+            "Komponen Kendaraan Lebih Awet",
+            "Hemat Biaya Jangka Panjang",
+            "Berkendara Selalu Aman"
           ],
           cta: "Selengkapnya"
         }
@@ -193,7 +209,7 @@ export const id = {
   },
   catalog: {
     title: "E-Katalog Berkah Hidayatullah",
-    desc: "Layanan unggulan kami berfokus pada dua bidang utama: Maintenance & Overhaul Alat Berat serta Pengadaan Barang dan Jasa untuk berbagai sektor industri.",
+    desc: "Layanan unggulan kami berfokus pada tiga bidang utama: Maintenance Alat Berat, Pengadaan Barang & Jasa, serta Perawatan Berkala Kendaraan.",
     featuredLabel: "Layanan Utama",
     otherLabel: "Layanan Pendukung Lainnya",
     detail: "Lihat Detail",
@@ -239,6 +255,7 @@ export const id = {
           'Alat Tulis Kantor (ATK)',
           'Suku Cadang Industri',
           'Pengadaan Pemerintah (E-Purchasing)',
+          'Alat-Alat Pertanian Lengkap',
           'Rantai Pasok Terintegrasi'
         ],
         longDesc: [
@@ -252,6 +269,33 @@ export const id = {
           "Kami memiliki rekam jejak yang kuat dalam memenuhi persyaratan pengadaan pemerintah, termasuk proses E-Purchasing dan tender pengadaan barang/jasa pemerintah sesuai peraturan yang berlaku (Perpres 16/2018 jo. 12/2021).",
           "Komitmen kami terhadap legalitas dan transparansi menjadikan setiap transaksi pengadaan dapat dipertanggungjawabkan secara penuh. Kami memastikan setiap proses berjalan sesuai dengan koridor hukum dan regulasi yang berlaku.",
           "Dengan layanan pengadaan yang terintegrasi, kompetitif, dan berorientasi pada kepuasan klien, kami siap menjadi mitra jangka panjang Anda dalam memenuhi setiap kebutuhan operasional dan proyek dengan standar kualitas yang tidak tertandingi."
+        ]
+      },
+      {
+        id: 'f3',
+        badge: 'Layanan Unggulan #3',
+        title: 'Perawatan Berkala Kendaraan',
+        tagline: 'Solusi Perawatan Profesional untuk Kendaraan Diesel & Bensin Anda',
+        image: '/service-kendaraan.png',
+        highlights: [
+          'Perawatan Kendaraan Diesel & Bensin',
+          'Performa Mesin Tetap Optimal',
+          'Komponen Kendaraan Lebih Awet',
+          'Hemat Biaya Jangka Panjang',
+          'Keamanan Berkendara Terjamin',
+          'Ditangani Ahli Mechanical Engineering'
+        ],
+        longDesc: [
+          "Selain alat berat, Berkah Hidayatullah juga menyediakan layanan spesialis untuk perawatan berkala kendaraan bermotor Anda, baik yang menggunakan mesin diesel maupun mesin bensin.",
+          "Kami menyadari bahwa kendaraan operasional maupun pribadi yang terawat dengan baik adalah kunci kelancaran mobilitas harian Anda. Perawatan berkala mencegah kerusakan mendadak yang memakan biaya besar.",
+          "Layanan kami dikelola langsung di bawah pengawasan ahli Mechanical Engineering yang berpengalaman, Bapak Efendi Payuyu, memastikan setiap kendaraan ditangani dengan standar teknis yang presisi dan profesional.",
+          "Manfaat utama dari perawatan berkala bersama kami adalah performa mesin yang selalu optimal. Tarikan mesin menjadi lebih responsif dan konsumsi bahan bakar lebih efisien.",
+          "Dengan pengecekan rutin dan penggantian suku cadang tepat waktu, komponen vital kendaraan Anda akan menjadi jauh lebih awet dan terhindar dari keausan dini.",
+          "Melalui investasi kecil pada perawatan berkala, Anda sebenarnya menghemat biaya operasional jangka panjang dengan menghindari perbaikan berat turun mesin (overhaul) yang mahal.",
+          "Keselamatan adalah prioritas utama kami. Sistem pengereman, suspensi, kelistrikan, dan kemudi diperiksa secara menyeluruh agar Anda selalu merasa aman dan nyaman saat berkendara di berbagai kondisi jalan.",
+          "Kami menggunakan perlengkapan diagnostik modern untuk mendeteksi masalah tersembunyi pada kendaraan injeksi dan sistem kelistrikan canggih.",
+          "Mulai dari ganti oli rutin, tune-up, servis rem, hingga pengecekan sistem pendingin mesin (radiator), semua dilakukan dengan teliti dan menggunakan cairan/suku cadang berkualitas.",
+          "Percayakan perawatan kendaraan Anda kepada tim mekanik handal kami. Kendaraan prima, aktivitas lancar, dan pikiran pun tenang."
         ]
       }
     ],

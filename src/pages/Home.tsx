@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ArrowRight, Star, ShieldCheck, Wrench, Briefcase, ChevronRight, Building2, Factory, HardHat, HeartPulse, Pickaxe, Tractor, Send } from 'lucide-react';
+import { ArrowRight, Star, ShieldCheck, Wrench, Briefcase, ChevronRight, Building2, Factory, HardHat, HeartPulse, Pickaxe, Tractor, Send, Car } from 'lucide-react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
@@ -172,8 +172,8 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Two Feature Blocks */}
-          <div className="grid lg:grid-cols-2 gap-6">
+          {/* Three Feature Blocks */}
+          <div className="grid lg:grid-cols-3 gap-6">
             {(t('home.coreServices.items') || []).map((item: any, idx: number) => (
               <motion.div
                 key={idx}
@@ -204,7 +204,9 @@ export default function Home() {
                     <div className="w-12 h-12 rounded-full bg-[#ff8a00]/10 border border-[#ff8a00]/30 flex items-center justify-center group-hover:bg-[#ff8a00] transition-colors shadow-lg shadow-orange-500/10">
                       {idx === 0
                         ? <Wrench className="w-5 h-5 text-[#ff8a00] group-hover:text-white transition-colors" />
-                        : <Briefcase className="w-5 h-5 text-[#ff8a00] group-hover:text-white transition-colors" />
+                        : idx === 1 
+                        ? <Briefcase className="w-5 h-5 text-[#ff8a00] group-hover:text-white transition-colors" />
+                        : <Car className="w-5 h-5 text-[#ff8a00] group-hover:text-white transition-colors" />
                       }
                     </div>
                   </div>
