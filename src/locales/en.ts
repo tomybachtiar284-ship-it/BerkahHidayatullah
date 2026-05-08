@@ -85,14 +85,14 @@ export const en = {
           icon: "car",
           badge: "Service #3",
           image: "/service-kendaraan.png",
-          title: "Periodic Vehicle Maintenance",
-          desc: "We provide periodic maintenance services for motorized vehicles, both diesel and gasoline engines. Handled directly by Mechanical Engineering experts to ensure your vehicle's performance is always optimal, safe to drive, and components last longer.",
+          title: "Vehicle Repair & Maintenance",
+          desc: "We provide periodic repair and maintenance services for motorized vehicles (diesel/gasoline), generator sets (genset), and various other industrial machines. Handled directly by Mechanical Engineering experts to ensure your engine's performance is always optimal and components last longer.",
           points: [
-            "Diesel & Gasoline Vehicle Maintenance",
+            "Vehicle Repair & Maintenance",
+            "Genset & Diesel Engine Service",
             "Optimal Engine Performance",
-            "Longer Lasting Vehicle Components",
-            "Long-Term Cost Savings",
-            "Always Safe Driving"
+            "Longer Lasting Engine Components",
+            "Long-Term Cost Savings"
           ],
           cta: "Learn More"
         }
@@ -215,6 +215,8 @@ export const en = {
     detail: "View Details",
     order: "Order / Inquire Price",
     noDetail: "Detailed information for this service is not yet available. Please contact us for more information.",
+    subJobsLabel: "Main Sub-Jobs",
+    unitsLabel: "Frequent units:",
     featured: [
       {
         id: 'f1',
@@ -241,6 +243,117 @@ export const en = {
           "Every unit we have handled will go through a series of strict and standardized functional tests and quality control processes before being returned to the operational area to guarantee equipment reliability.",
           "We also offer Annual Maintenance Contract programs that can be fully customized to fit the needs and working hours of your heavy equipment, providing budget certainty and peace of mind for project management.",
           "Entrust your heavy equipment maintenance and overhaul to the experts. Together with us, achieve maximum project productivity and profitability with a fleet that is always reliable, efficient, and ready for full operation."
+        ],
+        subServices: [
+          {
+            title: "Engine Overhaul",
+            desc: [
+              "Complete teardown of heavy equipment engine",
+              "Replacement of pistons, liners, bearings, gaskets",
+              "Tune-up and recalibration"
+            ],
+            units: ["Excavator", "Bulldozer", "Wheel Loader", "Dump Truck"],
+            image: "/engine_overhaul.png"
+          },
+          {
+            title: "Hydraulic System Repair",
+            desc: [
+              "Hydraulic pump repair",
+              "Hydraulic cylinder service",
+              "Seal kit replacement",
+              "Oil leak troubleshooting",
+              "This is the most frequent service as hydraulics are the main system of heavy equipment."
+            ],
+            image: "/hydraulic_repair.png"
+          },
+          {
+            title: "Undercarriage Repair",
+            desc: [
+              "Track link replacement",
+              "Roller repair",
+              "Sprocket replacement",
+              "Track adjustment"
+            ],
+            units: ["Excavator", "Bulldozer"],
+            image: "/undercarriage_repair.png"
+          },
+          {
+            title: "Periodic Preventive Maintenance (PM)",
+            desc: [
+              "Oil change",
+              "Filter change",
+              "Greasing",
+              "Electrical inspection",
+              "Critical component inspection",
+              "Usually performed based on HM (Hour Meter): 250 hours, 500 hours, 1000 hours, 2000 hours"
+            ],
+            image: "/preventive_maintenance.png"
+          },
+          {
+            title: "Electrical Troubleshooting",
+            desc: [
+              "Sensor error",
+              "ECU troubleshooting",
+              "Wiring harness repair",
+              "Alternator & starter repair"
+            ],
+            image: "/electrical_troubleshooting.png"
+          },
+          {
+            title: "Transmission & Final Drive Overhaul",
+            desc: [
+              "Transmission teardown",
+              "Final drive repair",
+              "Gear & bearing replacement"
+            ],
+            image: "/transmission_overhaul.png"
+          },
+          {
+            title: "Welding & Fabrication",
+            desc: [
+              "Bucket repair",
+              "Cracked boom arm repair",
+              "Bucket hardfacing",
+              "Attachment fabrication"
+            ],
+            image: "/welding_fabrication.png"
+          },
+          {
+            title: "Air Conditioning (AC) Cabin Service",
+            desc: [
+              "Operator AC service",
+              "Compressor replacement",
+              "Cooling system flushing"
+            ],
+            image: "/ac_cabin_service.png"
+          },
+          {
+            title: "General Unit Inspection",
+            desc: [
+              "Pre-project unit readiness check",
+              "Damage analysis",
+              "Repair cost estimation"
+            ],
+            image: "/general_inspection.png"
+          },
+          {
+            title: "Emergency Breakdown Service",
+            desc: [
+              "On-site breakdown repair",
+              "Mobile mechanic / on-site repair",
+              "Highly sought after in mining & project areas"
+            ],
+            image: "/emergency_breakdown.png"
+          },
+        ],
+        commonUnitsTitle: "Most Common Heavy Equipment Requiring Maintenance",
+        commonUnits: [
+          "Excavator", "Bulldozer", "Wheel Loader", "Motor Grader", "Vibro Roller",
+          "Crane", "Forklift", "Dump Truck", "Backhoe Loader", "Compactor"
+        ],
+        commonBrandsTitle: "Top Heavy Equipment Brands in Maintenance Market",
+        commonBrands: [
+          "Komatsu", "Caterpillar", "Hitachi", "Kobelco", "Volvo", "Doosan", "Hyundai", "Sany", "XCMG"
         ]
       },
       {
@@ -269,33 +382,197 @@ export const en = {
           "We have a strong track record in meeting government procurement requirements, including E-Purchasing processes and government goods/services tender procurement in accordance with applicable regulations.",
           "Our commitment to legality and transparency makes every procurement transaction fully accountable. We ensure every process runs in accordance with applicable laws and regulations.",
           "With integrated, competitive, and client-satisfaction-oriented procurement services, we are ready to be your long-term partner in meeting every operational and project need with unmatched quality standards."
+        ],
+        subServices: [
+          {
+            title: "Building Materials & Construction",
+            desc: [
+              "Supply of cement, steel, glass, metal, and structural pipes",
+              "Meets SNI and international quality standards"
+            ],
+            image: "/bahan_bangunan.png"
+          },
+          {
+            title: "Office Stationery (ATK)",
+            desc: [
+              "Fulfillment of daily to large-scale requirements",
+              "Supporting the efficiency and smooth administration of offices"
+            ],
+            image: "/atk.png"
+          },
+          {
+            title: "Government Procurement (E-Purchasing)",
+            desc: [
+              "Registered in National and Local E-Catalogs",
+              "Transparent processes in accordance with procurement regulations"
+            ],
+            image: "/epurchasing.png"
+          },
+          {
+            title: "Integrated Supply Chain",
+            desc: [
+              "Data-driven and systematic supply management",
+              "Guaranteed stock availability and punctual delivery"
+            ],
+            image: "/supply_chain.png"
+          },
+          {
+            title: "Medical Devices & Pharmaceuticals",
+            desc: [
+              "Procurement of primary medical devices for hospitals and clinics",
+              "Distribution of officially licensed medicines and pharmaceutical products"
+            ],
+            image: "/medical_devices.png"
+          },
+          {
+            title: "Industrial Spare Parts",
+            desc: [
+              "Provision of factory machine components and production tools",
+              "Specific spare parts for manufacturing needs"
+            ],
+            image: "/industrial_spareparts.png"
+          },
+          {
+            title: "Complete Agricultural Tools",
+            desc: [
+              "Precision agricultural tools such as tractors and planters",
+              "Technological support to increase crop yields"
+            ],
+            image: "/agricultural_tools.png"
+          },,
+          {
+            title: "Safety Equipment & PPE",
+            desc: [
+              "Personal Protective Equipment (PPE) with high safety standards",
+              "OHS equipment for mining, construction, and factories"
+            ],
+            image: ""
+          }
         ]
       },
       {
         id: 'f3',
         badge: 'Featured Service #3',
-        title: 'Periodic Vehicle Maintenance',
-        tagline: 'Professional Maintenance Solutions for Your Diesel & Gasoline Vehicles',
+        title: 'Vehicle Repair & Maintenance',
+        tagline: 'Professional Maintenance Solutions for Your Vehicles, Gensets & Diesel Engines',
         image: '/service-kendaraan.png',
         highlights: [
-          'Diesel & Gasoline Vehicle Maintenance',
+          'Vehicle Repair & Maintenance',
+          'Genset & Diesel Engine Service',
           'Optimal Engine Performance',
-          'Longer Lasting Vehicle Components',
+          'Longer Lasting Engine Components',
           'Long-Term Cost Savings',
-          'Guaranteed Driving Safety',
           'Handled by Mechanical Engineering Experts'
         ],
         longDesc: [
-          "In addition to heavy equipment, Berkah Hidayatullah also provides specialist services for the periodic maintenance of your motorized vehicles, both those using diesel engines and gasoline engines.",
-          "We realize that well-maintained operational and private vehicles are key to the smooth running of your daily mobility. Periodic maintenance prevents sudden breakdowns that cost a lot.",
-          "Our services are managed directly under the supervision of an experienced Mechanical Engineering expert, Mr. Efendi Payuyu, ensuring every vehicle is handled with precise and professional technical standards.",
-          "The main benefit of periodic maintenance with us is engine performance that is always optimal. Engine pull becomes more responsive and fuel consumption is more efficient.",
-          "With routine checks and timely replacement of spare parts, your vehicle's vital components will become much more durable and avoid premature wear and tear.",
+          "In addition to heavy equipment, Berkah Hidayatullah also provides specialist services for the repair and periodic maintenance of your motorized vehicles, as well as various diesel engines and industrial generator sets (gensets).",
+          "We realize that well-maintained operational vehicles and supporting machines like gensets are key to the smooth running of your daily mobility and operations. Periodic maintenance prevents sudden breakdowns that cost a lot.",
+          "Our services are managed directly under the supervision of an experienced Mechanical Engineering expert, Mr. Efendi Payuyu, ensuring every vehicle and machine is handled with precise and professional technical standards.",
+          "The main benefit of periodic maintenance with us is engine performance that is always optimal. Engine pull becomes more responsive, power output is stable, and fuel consumption is more efficient.",
+          "With routine checks and timely replacement of spare parts, the vital components of your vehicle and genset will become much more durable and avoid premature wear and tear.",
           "Through a small investment in periodic maintenance, you actually save long-term operational costs by avoiding expensive heavy engine repairs (overhaul).",
-          "Safety is our top priority. Braking systems, suspension, electricity, and steering are thoroughly checked so you always feel safe and comfortable when driving in various road conditions.",
-          "We use modern diagnostic equipment to detect hidden problems in injection vehicles and advanced electrical systems.",
-          "From routine oil changes, tune-ups, brake services, to checking the engine cooling system (radiator), everything is done carefully and uses quality fluids/spare parts.",
-          "Entrust your vehicle maintenance to our reliable mechanic team. Prime vehicle, smooth activities, and peace of mind."
+          "We serve various repair needs ranging from light service, injection system repairs, to handling electrical problems and engine cooling systems (radiators).",
+          "We use modern diagnostic equipment to detect hidden problems in vehicles as well as advanced electrical systems of industrial machines.",
+          "All work is done carefully and uses only high-quality lubricants and spare parts to guarantee the durability of the repair results.",
+          "Entrust your vehicle and genset maintenance to our reliable mechanic team. Prime engine, smooth activities, and peace of mind."
+        ],
+        subServices: [
+          {
+            title: "Periodic Vehicle Service",
+            desc: [
+              "Routine checks and preventive maintenance",
+              "Maintaining optimal engine performance"
+            ],
+            image: "/service_berkala.png"
+          },
+          {
+            title: "Engine Repair & Overhaul",
+            desc: [
+              "Full or partial engine overhaul handling",
+              "Restoration of diesel and gasoline engine performance"
+            ],
+            image: "/perbaikan_mesin.png"
+          },
+          {
+            title: "Electrical System Service",
+            desc: [
+              "Wiring, alternator, and starter motor repair",
+              "Troubleshooting complex electrical problems"
+            ],
+            image: "/sistem_kelistrikan.png"
+          },
+          {
+            title: "Oil Change & Tune Up",
+            desc: [
+              "High-quality lubricant replacement",
+              "Injector cleaning and combustion system calibration"
+            ],
+            image: "/ganti_oli.png"
+          },
+          {
+            title: "Brake & Suspension Maintenance",
+            desc: [
+              "Checking brake pads, discs, and brake fluid",
+              "Shock absorber and vehicle undercarriage system repair"
+            ],
+            image: "/perawatan_rem.png"
+          },
+          {
+            title: "Vehicle AC Repair",
+            desc: [
+              "Compressor service, evaporator, and freon refilling",
+              "Cabin air circulation system cleaning"
+            ],
+            image: "/perbaikan_ac.png"
+          },
+          {
+            title: "Body Repair & Painting",
+            desc: [
+              "Dent repair and exterior restoration",
+              "Repainting with high-quality oven paint"
+            ],
+            image: "/body_repair.png"
+          },
+          {
+            title: "Vehicle Spare Parts Supply",
+            desc: [
+              "Genuine parts and OEM",
+              "Availability of fast-moving and slow-moving parts"
+            ],
+            image: "/sparepart.png"
+          },
+          {
+            title: "Vehicle Diagnostic Scanner",
+            desc: [
+              "Scanning the vehicle's computer system (ECU)",
+              "Accurate and fast electronic fault detection"
+            ],
+            image: "/diagnostic_scanner.png"
+          },
+          {
+            title: "Operational Fleet Service",
+            desc: [
+              "Periodic maintenance contracts for company operational vehicles",
+              "Structured fleet maintenance management"
+            ],
+            image: "/service_armada.png"
+          },
+          {
+            title: "Transmission & Clutch Repair",
+            desc: [
+              "Manual and automatic (AT/CVT) transmission service",
+              "Clutch set replacement for smooth gear shifting"
+            ],
+            image: "/transmisi_kopling.png"
+          },
+          {
+            title: "Emergency Service & Maintenance",
+            desc: [
+              "On-call mechanic service for broken down vehicles",
+              "Fast response for emergencies on the road"
+            ],
+            image: "/emergency_service.png"
+          }
         ]
       }
     ],

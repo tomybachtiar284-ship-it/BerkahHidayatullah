@@ -85,14 +85,14 @@ export const id = {
           icon: "car",
           badge: "Layanan #3",
           image: "/service-kendaraan.png",
-          title: "Perawatan Berkala Kendaraan",
-          desc: "Kami menyediakan layanan perawatan berkala untuk kendaraan bermotor, baik mesin diesel maupun bensin. Ditangani langsung oleh tenaga ahli Mechanical Engineering untuk memastikan performa kendaraan Anda selalu optimal, aman dikendarai, dan komponen lebih awet.",
+          title: "Perbaikan & Perawatan Kendaraan",
+          desc: "Kami menyediakan layanan perbaikan dan perawatan berkala untuk kendaraan bermotor (diesel/bensin), genset, dan berbagai mesin industri lainnya. Ditangani langsung oleh tenaga ahli Mechanical Engineering untuk memastikan performa mesin Anda selalu optimal dan komponen lebih awet.",
           points: [
-            "Perawatan Kendaraan Diesel & Bensin",
+            "Perbaikan & Perawatan Kendaraan",
+            "Service Genset & Mesin Diesel",
             "Performa Mesin Tetap Optimal",
-            "Komponen Kendaraan Lebih Awet",
-            "Hemat Biaya Jangka Panjang",
-            "Berkendara Selalu Aman"
+            "Komponen Mesin Lebih Awet",
+            "Hemat Biaya Jangka Panjang"
           ],
           cta: "Selengkapnya"
         }
@@ -215,6 +215,8 @@ export const id = {
     detail: "Lihat Detail",
     order: "Pesan / Tanyakan Harga",
     noDetail: "Detail informasi lengkap untuk layanan ini belum tersedia. Silakan hubungi kami untuk informasi lebih lanjut.",
+    subJobsLabel: "Sub Pekerjaan Utama",
+    unitsLabel: "Unit yang sering:",
     featured: [
       {
         id: 'f1',
@@ -241,6 +243,117 @@ export const id = {
           "Setiap unit yang telah kami tangani akan melalui serangkaian proses pengujian fungsional (functional test) dan quality control yang ketat dan terstandar sebelum dikembalikan ke area operasional untuk menjamin keandalan alat.",
           "Kami juga menawarkan program kontrak pemeliharaan berkala (Annual Maintenance Contract) yang dapat dikustomisasi sepenuhnya sesuai dengan kebutuhan dan jam kerja alat berat Anda, memberikan kepastian anggaran dan ketenangan pikiran bagi manajemen proyek.",
           "Serahkan urusan perawatan dan overhaul alat berat Anda kepada para ahlinya. Bersama kami, raih tingkat produktivitas dan profitabilitas proyek yang maksimal dengan armada yang selalu andal, efisien, dan siap beroperasi penuh."
+        ],
+        subServices: [
+          {
+            title: "Overhaul Engine",
+            desc: [
+              "Bongkar total mesin alat berat",
+              "Penggantian piston, liner, bearing, gasket",
+              "Tune up dan kalibrasi ulang"
+            ],
+            units: ["Excavator", "Bulldozer", "Wheel Loader", "Dump Truck"],
+            image: "/engine_overhaul.png"
+          },
+          {
+            title: "Hydraulic System Repair",
+            desc: [
+              "Perbaikan hydraulic pump",
+              "Service hydraulic cylinder",
+              "Ganti seal kit",
+              "Troubleshooting kebocoran oli",
+              "Ini termasuk layanan paling sering karena hydraulic adalah sistem utama alat berat."
+            ],
+            image: "/hydraulic_repair.png"
+          },
+          {
+            title: "Undercarriage Repair",
+            desc: [
+              "Penggantian track link",
+              "Roller repair",
+              "Sprocket replacement",
+              "Track adjustment"
+            ],
+            units: ["Excavator", "Bulldozer"],
+            image: "/undercarriage_repair.png"
+          },
+          {
+            title: "Preventive Maintenance (PM) Berkala",
+            desc: [
+              "Ganti oli",
+              "Ganti filter",
+              "Greasing",
+              "Pemeriksaan kelistrikan",
+              "Inspeksi komponen kritikal",
+              "Biasanya dilakukan berdasarkan HM (Hour Meter): 250 jam, 500 jam, 1000 jam, 2000 jam"
+            ],
+            image: "/preventive_maintenance.png"
+          },
+          {
+            title: "Electrical Troubleshooting",
+            desc: [
+              "Sensor error",
+              "ECU troubleshooting",
+              "Wiring harness repair",
+              "Alternator & starter repair"
+            ],
+            image: "/electrical_troubleshooting.png"
+          },
+          {
+            title: "Transmission & Final Drive Overhaul",
+            desc: [
+              "Bongkar transmisi",
+              "Repair final drive",
+              "Ganti gear & bearing"
+            ],
+            image: "/transmission_overhaul.png"
+          },
+          {
+            title: "Welding & Fabrication",
+            desc: [
+              "Repair bucket",
+              "Perbaikan boom arm retak",
+              "Hardfacing bucket",
+              "Pembuatan attachment"
+            ],
+            image: "/welding_fabrication.png"
+          },
+          {
+            title: "Air Conditioning (AC) Cabin Service",
+            desc: [
+              "Service AC operator",
+              "Penggantian compressor",
+              "Flushing sistem pendingin"
+            ],
+            image: "/ac_cabin_service.png"
+          },
+          {
+            title: "General Inspection Unit",
+            desc: [
+              "Cek kesiapan unit sebelum proyek",
+              "Analisa kerusakan",
+              "Estimasi biaya repair"
+            ],
+            image: "/general_inspection.png"
+          },
+          {
+            title: "Emergency Breakdown Service",
+            desc: [
+              "Perbaikan unit mogok di lapangan",
+              "Mobile mechanic / onsite repair",
+              "Sangat sering dicari di area tambang & proyek"
+            ],
+            image: "/emergency_breakdown.png"
+          },
+        ],
+        commonUnitsTitle: "Alat Berat yang Paling Sering Membutuhkan Maintenance",
+        commonUnits: [
+          "Excavator", "Bulldozer", "Wheel Loader", "Motor Grader", "Vibro Roller",
+          "Crane", "Forklift", "Dump Truck", "Backhoe Loader", "Compactor"
+        ],
+        commonBrandsTitle: "Brand Alat Berat yang Paling Banyak Pasar Maintenance-nya",
+        commonBrands: [
+          "Komatsu", "Caterpillar", "Hitachi", "Kobelco", "Volvo", "Doosan", "Hyundai", "Sany", "XCMG"
         ]
       },
       {
@@ -269,33 +382,197 @@ export const id = {
           "Kami memiliki rekam jejak yang kuat dalam memenuhi persyaratan pengadaan pemerintah, termasuk proses E-Purchasing dan tender pengadaan barang/jasa pemerintah sesuai peraturan yang berlaku (Perpres 16/2018 jo. 12/2021).",
           "Komitmen kami terhadap legalitas dan transparansi menjadikan setiap transaksi pengadaan dapat dipertanggungjawabkan secara penuh. Kami memastikan setiap proses berjalan sesuai dengan koridor hukum dan regulasi yang berlaku.",
           "Dengan layanan pengadaan yang terintegrasi, kompetitif, dan berorientasi pada kepuasan klien, kami siap menjadi mitra jangka panjang Anda dalam memenuhi setiap kebutuhan operasional dan proyek dengan standar kualitas yang tidak tertandingi."
+        ],
+        subServices: [
+          {
+            title: "Bahan Bangunan & Material Konstruksi",
+            desc: [
+              "Penyediaan semen, baja, kaca, logam, dan pipa struktur",
+              "Memenuhi standar SNI dan kualitas internasional"
+            ],
+            image: "/bahan_bangunan.png"
+          },
+          {
+            title: "Alat Tulis Kantor (ATK)",
+            desc: [
+              "Pemenuhan kebutuhan harian hingga skala besar",
+              "Mendukung efisiensi kelancaran administrasi perkantoran"
+            ],
+            image: "/atk.png"
+          },
+          {
+            title: "Pengadaan Pemerintah (E-Purchasing)",
+            desc: [
+              "Terdaftar di E-Katalog Nasional dan Lokal",
+              "Proses transparan sesuai regulasi (Perpres Pengadaan)"
+            ],
+            image: "/epurchasing.png"
+          },
+          {
+            title: "Rantai Pasok Terintegrasi",
+            desc: [
+              "Manajemen suplai berbasis data dan sistematis",
+              "Jaminan ketersediaan stok dan ketepatan waktu pengiriman"
+            ],
+            image: "/supply_chain.png"
+          },
+          {
+            title: "Alat Kesehatan & Farmasi",
+            desc: [
+              "Pengadaan alat kesehatan primer untuk rumah sakit dan klinik",
+              "Distribusi obat-obatan dan produk farmasi berizin resmi"
+            ],
+            image: "/medical_devices.png"
+          },
+          {
+            title: "Suku Cadang Industri",
+            desc: [
+              "Penyediaan komponen mesin pabrik dan alat produksi",
+              "Suku cadang spesifik untuk kebutuhan manufaktur"
+            ],
+            image: "/industrial_spareparts.png"
+          },
+          {
+            title: "Alat-Alat Pertanian Lengkap",
+            desc: [
+              "Alat pertanian presisi seperti traktor dan mesin tanam",
+              "Dukungan teknologi untuk meningkatkan hasil panen"
+            ],
+            image: "/agricultural_tools.png"
+          },,
+          {
+            title: "Perlengkapan Safety & APD",
+            desc: [
+              "Alat Pelindung Diri (APD) berstandar keselamatan tinggi",
+              "Perlengkapan K3 untuk pertambangan, konstruksi, dan pabrik"
+            ],
+            image: ""
+          }
         ]
       },
       {
         id: 'f3',
         badge: 'Layanan Unggulan #3',
-        title: 'Perawatan Berkala Kendaraan',
-        tagline: 'Solusi Perawatan Profesional untuk Kendaraan Diesel & Bensin Anda',
+        title: 'Perbaikan & Perawatan Kendaraan',
+        tagline: 'Solusi Perawatan Profesional untuk Kendaraan, Genset & Mesin Diesel Anda',
         image: '/service-kendaraan.png',
         highlights: [
-          'Perawatan Kendaraan Diesel & Bensin',
+          'Perbaikan & Perawatan Kendaraan',
+          'Service Genset & Mesin Diesel',
           'Performa Mesin Tetap Optimal',
-          'Komponen Kendaraan Lebih Awet',
+          'Komponen Mesin Lebih Awet',
           'Hemat Biaya Jangka Panjang',
-          'Keamanan Berkendara Terjamin',
           'Ditangani Ahli Mechanical Engineering'
         ],
         longDesc: [
-          "Selain alat berat, Berkah Hidayatullah juga menyediakan layanan spesialis untuk perawatan berkala kendaraan bermotor Anda, baik yang menggunakan mesin diesel maupun mesin bensin.",
-          "Kami menyadari bahwa kendaraan operasional maupun pribadi yang terawat dengan baik adalah kunci kelancaran mobilitas harian Anda. Perawatan berkala mencegah kerusakan mendadak yang memakan biaya besar.",
-          "Layanan kami dikelola langsung di bawah pengawasan ahli Mechanical Engineering yang berpengalaman, Bapak Efendi Payuyu, memastikan setiap kendaraan ditangani dengan standar teknis yang presisi dan profesional.",
-          "Manfaat utama dari perawatan berkala bersama kami adalah performa mesin yang selalu optimal. Tarikan mesin menjadi lebih responsif dan konsumsi bahan bakar lebih efisien.",
-          "Dengan pengecekan rutin dan penggantian suku cadang tepat waktu, komponen vital kendaraan Anda akan menjadi jauh lebih awet dan terhindar dari keausan dini.",
+          "Selain alat berat, Berkah Hidayatullah juga menyediakan layanan spesialis untuk perbaikan dan perawatan berkala kendaraan bermotor Anda, serta berbagai mesin diesel dan genset industri.",
+          "Kami menyadari bahwa kendaraan operasional dan mesin pendukung seperti genset yang terawat dengan baik adalah kunci kelancaran mobilitas dan operasional harian Anda. Perawatan berkala mencegah kerusakan mendadak yang memakan biaya besar.",
+          "Layanan kami dikelola langsung di bawah pengawasan ahli Mechanical Engineering yang berpengalaman, Bapak Efendi Payuyu, memastikan setiap kendaraan dan mesin ditangani dengan standar teknis yang presisi dan profesional.",
+          "Manfaat utama dari perawatan berkala bersama kami adalah performa mesin yang selalu optimal. Tarikan mesin menjadi lebih responsif, output daya stabil, dan konsumsi bahan bakar lebih efisien.",
+          "Dengan pengecekan rutin dan penggantian suku cadang tepat waktu, komponen vital kendaraan dan genset Anda akan menjadi jauh lebih awet dan terhindar dari keausan dini.",
           "Melalui investasi kecil pada perawatan berkala, Anda sebenarnya menghemat biaya operasional jangka panjang dengan menghindari perbaikan berat turun mesin (overhaul) yang mahal.",
-          "Keselamatan adalah prioritas utama kami. Sistem pengereman, suspensi, kelistrikan, dan kemudi diperiksa secara menyeluruh agar Anda selalu merasa aman dan nyaman saat berkendara di berbagai kondisi jalan.",
-          "Kami menggunakan perlengkapan diagnostik modern untuk mendeteksi masalah tersembunyi pada kendaraan injeksi dan sistem kelistrikan canggih.",
-          "Mulai dari ganti oli rutin, tune-up, servis rem, hingga pengecekan sistem pendingin mesin (radiator), semua dilakukan dengan teliti dan menggunakan cairan/suku cadang berkualitas.",
-          "Percayakan perawatan kendaraan Anda kepada tim mekanik handal kami. Kendaraan prima, aktivitas lancar, dan pikiran pun tenang."
+          "Kami melayani berbagai kebutuhan perbaikan mulai dari servis ringan, perbaikan sistem injeksi, hingga penanganan masalah kelistrikan dan sistem pendingin mesin (radiator).",
+          "Kami menggunakan perlengkapan diagnostik modern untuk mendeteksi masalah tersembunyi pada kendaraan maupun sistem kelistrikan mesin industri yang canggih.",
+          "Semua pengerjaan dilakukan dengan teliti dan hanya menggunakan cairan pelumas serta suku cadang berkualitas tinggi untuk menjamin durabilitas hasil perbaikan.",
+          "Percayakan perawatan kendaraan dan mesin genset Anda kepada tim mekanik handal kami. Mesin prima, aktivitas lancar, dan pikiran pun tenang."
+        ],
+        subServices: [
+          {
+            title: "Service Berkala Kendaraan",
+            desc: [
+              "Pengecekan rutin dan perawatan preventif",
+              "Menjaga performa mesin agar selalu optimal"
+            ],
+            image: "/service_berkala.png"
+          },
+          {
+            title: "Perbaikan Mesin & Overhaul",
+            desc: [
+              "Penanganan turun mesin (overhaul) total atau parsial",
+              "Restorasi performa mesin diesel dan bensin"
+            ],
+            image: "/perbaikan_mesin.png"
+          },
+          {
+            title: "Service Sistem Kelistrikan",
+            desc: [
+              "Perbaikan wiring, alternator, dan motor starter",
+              "Troubleshooting masalah kelistrikan kompleks"
+            ],
+            image: "/sistem_kelistrikan.png"
+          },
+          {
+            title: "Ganti Oli & Tune Up",
+            desc: [
+              "Penggantian pelumas berkualitas tinggi",
+              "Pembersihan injektor dan kalibrasi sistem pembakaran"
+            ],
+            image: "/ganti_oli.png"
+          },
+          {
+            title: "Perawatan Rem & Suspensi",
+            desc: [
+              "Pengecekan kampas rem, cakram, dan minyak rem",
+              "Perbaikan shockbreaker dan sistem kaki-kaki kendaraan"
+            ],
+            image: "/perawatan_rem.png"
+          },
+          {
+            title: "Perbaikan AC Kendaraan",
+            desc: [
+              "Service kompresor, evaporator, dan pengisian freon",
+              "Pembersihan sistem sirkulasi udara kabin"
+            ],
+            image: "/perbaikan_ac.png"
+          },
+          {
+            title: "Body Repair & Pengecatan",
+            desc: [
+              "Perbaikan bodi penyok dan restorasi eksterior",
+              "Pengecatan ulang dengan cat oven berkualitas"
+            ],
+            image: "/body_repair.png"
+          },
+          {
+            title: "Penyediaan Sparepart Kendaraan",
+            desc: [
+              "Suku cadang asli (genuine parts) dan OEM",
+              "Ketersediaan part fast-moving maupun slow-moving"
+            ],
+            image: "/sparepart.png"
+          },
+          {
+            title: "Diagnostic Scanner Kendaraan",
+            desc: [
+              "Pemindaian sistem komputer (ECU) kendaraan",
+              "Deteksi kerusakan elektronik dengan akurat dan cepat"
+            ],
+            image: "/diagnostic_scanner.png"
+          },
+          {
+            title: "Service Armada Operasional",
+            desc: [
+              "Kontrak perawatan berkala untuk kendaraan operasional perusahaan",
+              "Manajemen pemeliharaan armada yang terstruktur"
+            ],
+            image: "/service_armada.png"
+          },
+          {
+            title: "Perbaikan Transmisi & Kopling",
+            desc: [
+              "Service transmisi manual dan otomatis (AT/CVT)",
+              "Penggantian set kopling untuk perpindahan gigi yang halus"
+            ],
+            image: "/transmisi_kopling.png"
+          },
+          {
+            title: "Emergency Service & Maintenance",
+            desc: [
+              "Layanan mekanik panggilan untuk kendaraan mogok",
+              "Respons cepat untuk kondisi darurat di jalan"
+            ],
+            image: "/emergency_service.png"
+          }
         ]
       }
     ],

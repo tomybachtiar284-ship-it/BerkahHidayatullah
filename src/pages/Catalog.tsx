@@ -11,6 +11,16 @@ type FeaturedItem = {
   image: string;
   highlights: string[];
   longDesc: string[];
+  subServices?: {
+    title: string;
+    desc: string[];
+    units?: string[];
+    image?: string;
+  }[];
+  commonUnitsTitle?: string;
+  commonUnits?: string[];
+  commonBrandsTitle?: string;
+  commonBrands?: string[];
 };
 
 type CatalogItem = {
@@ -252,6 +262,78 @@ export default function Catalog() {
                   <p key={i} className="text-slate-600 text-sm leading-relaxed">{para}</p>
                 ))}
               </div>
+
+              {selectedFeatured.subServices && (
+                <div className="px-6 md:px-8 pb-8">
+                  <h3 className="text-xl font-black text-slate-900 mb-6 border-b border-slate-200 pb-2">{t('catalog.subJobsLabel') || 'Sub Pekerjaan Utama'}</h3>
+                  <div className="space-y-6">
+                    {selectedFeatured.subServices.map((sub, i) => (
+                      <div key={i} className="bg-slate-50 border border-slate-200 rounded-xl p-5 sm:p-6 flex flex-col md:flex-row gap-6 hover:shadow-md transition-shadow">
+                        <div className="w-full md:w-1/3 aspect-video bg-slate-200 rounded-lg overflow-hidden shrink-0 relative flex items-center justify-center">
+                          {sub.image ? (
+                            <img src={sub.image} alt={sub.title} className="w-full h-full object-cover" />
+                          ) : (
+                            <div className="text-slate-400 flex flex-col items-center gap-2">
+                              <Wrench className="w-8 h-8 opacity-50" />
+                              <span className="text-xs font-medium uppercase tracking-widest">Image Soon</span>
+                            </div>
+                          )}
+                        </div>
+                        <div className="flex-1">
+                          <h4 className="text-lg font-bold text-[#ff8a00] mb-3">{sub.title}</h4>
+                          <ul className="space-y-2 mb-4">
+                            {sub.desc.map((d, j) => (
+                              <li key={j} className="flex items-start gap-2">
+                                <div className="w-1.5 h-1.5 rounded-full bg-indigo-900 mt-1.5 shrink-0" />
+                                <span className="text-sm text-slate-600 leading-relaxed">{d}</span>
+                              </li>
+                            ))}
+                          </ul>
+                          {sub.units && (
+                            <div className="mt-4 pt-4 border-t border-slate-200">
+                              <span className="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2 block">{t('catalog.unitsLabel') || 'Unit yang sering:'}</span>
+                              <div className="flex flex-wrap gap-2">
+                                {sub.units.map((unit, j) => (
+                                  <span key={j} className="bg-indigo-100 text-indigo-900 px-2 py-1 rounded text-[10px] font-bold uppercase tracking-wider">{unit}</span>
+                                ))}
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {(selectedFeatured.commonUnits || selectedFeatured.commonBrands) && (
+                <div className="px-6 md:px-8 pb-8 grid md:grid-cols-2 gap-8">
+                  {selectedFeatured.commonUnits && (
+                    <div className="bg-slate-900 text-white p-6 rounded-xl relative overflow-hidden">
+                      <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-10 translate-x-10"></div>
+                      <h4 className="text-sm font-black uppercase tracking-widest text-[#ff8a00] mb-4 relative z-10">{selectedFeatured.commonUnitsTitle || 'Alat Berat yang Sering Membutuhkan Maintenance'}</h4>
+                      <ul className="grid grid-cols-2 gap-2 relative z-10">
+                        {selectedFeatured.commonUnits.map((u, i) => (
+                          <li key={i} className="flex items-center gap-2 text-xs text-slate-300">
+                            <Check className="w-3 h-3 text-[#ff8a00]" /> {u}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  {selectedFeatured.commonBrands && (
+                    <div className="bg-indigo-900 text-white p-6 rounded-xl relative overflow-hidden">
+                      <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-10 translate-x-10"></div>
+                      <h4 className="text-sm font-black uppercase tracking-widest text-[#ff8a00] mb-4 relative z-10">{selectedFeatured.commonBrandsTitle || 'Brand Alat Berat Populer'}</h4>
+                      <div className="flex flex-wrap gap-2 relative z-10">
+                        {selectedFeatured.commonBrands.map((b, i) => (
+                          <span key={i} className="bg-white/10 px-2.5 py-1 text-xs font-bold tracking-wider rounded">{b}</span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
 
               <div className="px-6 md:px-8 pb-8">
                 <a

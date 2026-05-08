@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { User, ShieldCheck, MapPin, Building, Target, Users } from 'lucide-react';
+import { ShieldCheck, MapPin, Target, Users } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function Profile() {

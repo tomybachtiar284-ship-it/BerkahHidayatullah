@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ArrowRight, Star, ShieldCheck, Wrench, Briefcase, ChevronRight, Building2, Factory, HardHat, HeartPulse, Pickaxe, Tractor, Send, Car } from 'lucide-react';
+import { Star, ShieldCheck, Wrench, Briefcase, ChevronRight, Building2, Factory, HardHat, HeartPulse, Pickaxe, Tractor, Send, Car } from 'lucide-react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
