@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, FormEvent } from 'react';
 import { Star, ShieldCheck, Wrench, Briefcase, ChevronRight, Building2, Factory, HardHat, HeartPulse, Pickaxe, Tractor, Send, Car } from 'lucide-react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
@@ -16,7 +16,7 @@ export default function Home() {
     message: ''
   });
 
-  const handleWhatsAppSubmit = (e: React.FormEvent) => {
+  const handleWhatsAppSubmit = (e: FormEvent) => {
     e.preventDefault();
     const { name, company, service, message } = formData;
     const text = `Halo tim CV Berkah Hidayatullah,%0A%0APerkenalkan saya *${name}* dari *${company}*.%0ASaya ingin berkonsultasi mengenai layanan *${service}*.%0A%0A*Pesan / Kebutuhan:*%0A${message}`;

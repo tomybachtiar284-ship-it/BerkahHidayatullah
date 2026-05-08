@@ -30,7 +30,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-4">
                 <Mail className="w-5 h-5 text-[#ff8a00] shrink-0" />
-                <span className="text-xs">info@berkahhidayatullah.com</span>
+                <span className="text-xs">cvberkahhidayatullah@gmail.com</span>
               </li>
               <li className="flex items-center gap-4">
                 <Phone className="w-5 h-5 text-[#ff8a00] shrink-0" />

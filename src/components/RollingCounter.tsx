@@ -8,13 +8,12 @@ interface RollingCounterProps {
 
 export default function RollingCounter({ value, duration = 2000 }: RollingCounterProps) {
   const ref = useRef<HTMLSpanElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isInView = useInView(ref, { once: true, margin: "0px" });
   
   const motionValue = useMotionValue(0);
   const springValue = useSpring(motionValue, {
     damping: 50,
     stiffness: 100,
-    duration: duration,
   });
 
   useEffect(() => {
@@ -26,7 +25,7 @@ export default function RollingCounter({ value, duration = 2000 }: RollingCounte
   useEffect(() => {
     return springValue.on("change", (latest) => {
       if (ref.current) {
-        ref.current.textContent = Intl.NumberFormat('id-ID').format(Math.floor(latest));
+        ref.current.textContent = Intl.NumberFormat('id-ID').format(Math.round(latest));
       }
     });
   }, [springValue]);
