@@ -3,17 +3,20 @@ import { useInView, useMotionValue, useSpring } from 'motion/react';
 
 interface RollingCounterProps {
   value: number;
-  duration?: number;
+  duration?: number; // in seconds
 }
 
-export default function RollingCounter({ value, duration = 2000 }: RollingCounterProps) {
+export default function RollingCounter({ value, duration = 2 }: RollingCounterProps) {
   const ref = useRef<HTMLSpanElement>(null);
   const isInView = useInView(ref, { once: true, margin: "0px" });
-  
+
+  // Convert duration (seconds) to spring stiffness: longer duration = lower stiffness
+  const stiffness = Math.max(20, 200 / duration);
+
   const motionValue = useMotionValue(0);
   const springValue = useSpring(motionValue, {
     damping: 50,
-    stiffness: 100,
+    stiffness,
   });
 
   useEffect(() => {

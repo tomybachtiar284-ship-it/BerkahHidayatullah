@@ -439,7 +439,7 @@ export const id = {
               "Dukungan teknologi untuk meningkatkan hasil panen"
             ],
             image: "/agricultural_tools.png"
-          },,
+          },
           {
             title: "Perlengkapan Safety & APD",
             desc: [

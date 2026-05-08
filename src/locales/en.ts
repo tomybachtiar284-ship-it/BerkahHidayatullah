@@ -439,7 +439,7 @@ export const en = {
               "Technological support to increase crop yields"
             ],
             image: "/agricultural_tools.png"
-          },,
+          },
           {
             title: "Safety Equipment & PPE",
             desc: [
