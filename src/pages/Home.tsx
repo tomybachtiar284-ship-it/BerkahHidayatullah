@@ -1,4 +1,4 @@
-import React, { useState, FormEvent } from 'react';
+import React, { useState } from 'react';
 import { Star, ShieldCheck, Wrench, Briefcase, ChevronRight, Building2, Factory, HardHat, HeartPulse, Pickaxe, Tractor, Send, Car, Mail } from 'lucide-react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
