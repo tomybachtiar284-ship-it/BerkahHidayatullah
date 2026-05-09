@@ -24,6 +24,7 @@ export default function Navbar() {
               src="/logo-resmi.png"
               alt="Logo CV Berkah Hidayatullah"
               className="h-20 w-auto object-contain"
+              decoding="async"
             />
           </Link>
 

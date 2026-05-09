@@ -101,6 +101,8 @@ export default function Catalog() {
                   src={item.image}
                   alt={item.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent" />
                 <div className="absolute top-4 left-4">
@@ -194,7 +196,7 @@ export default function Catalog() {
                 className="bg-white border-b border-r border-slate-200 flex flex-col group p-5 cursor-pointer hover:shadow-lg transition-shadow relative"
               >
                 <div className="relative h-36 overflow-hidden bg-slate-100 mb-4">
-                  <img src={item.image} alt={item.title} className="w-full h-full object-cover grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" />
+                  <img src={item.image} alt={item.title} className="w-full h-full object-cover grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" loading="lazy" decoding="async" />
                   <div className="absolute top-3 left-3">
                     <span className="bg-indigo-900 text-white text-[9px] font-bold uppercase tracking-widest px-2 py-0.5">{item.category}</span>
                   </div>
@@ -230,7 +232,7 @@ export default function Catalog() {
               className="bg-white w-full sm:max-w-3xl max-h-[92vh] overflow-y-auto relative"
             >
               <div className="relative h-64 overflow-hidden">
-                <img src={selectedFeatured.image} alt={selectedFeatured.title} className="w-full h-full object-cover" />
+                <img src={selectedFeatured.image} alt={selectedFeatured.title} className="w-full h-full object-cover" loading="lazy" decoding="async" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                 <div className="absolute bottom-5 left-6 right-14">
                   <span className="inline-flex items-center gap-1.5 bg-[#ff8a00] text-white text-[10px] font-black uppercase tracking-widest px-3 py-1.5 mb-3">
@@ -271,7 +273,7 @@ export default function Catalog() {
                       <div key={i} className="bg-slate-50 border border-slate-200 rounded-xl p-5 sm:p-6 flex flex-col md:flex-row gap-6 hover:shadow-md transition-shadow">
                         <div className="w-full md:w-1/3 aspect-video bg-slate-200 rounded-lg overflow-hidden shrink-0 relative flex items-center justify-center">
                           {sub.image ? (
-                            <img src={sub.image} alt={sub.title} className="w-full h-full object-cover" />
+                            <img src={sub.image} alt={sub.title} className="w-full h-full object-cover" loading="lazy" decoding="async" />
                           ) : (
                             <div className="text-slate-400 flex flex-col items-center gap-2">
                               <Wrench className="w-8 h-8 opacity-50" />
@@ -369,7 +371,7 @@ export default function Catalog() {
               className="bg-white w-full sm:max-w-2xl max-h-[90vh] overflow-y-auto relative"
             >
               <div className="relative h-52 overflow-hidden">
-                <img src={selectedItem.image} alt={selectedItem.title} className="w-full h-full object-cover" />
+                <img src={selectedItem.image} alt={selectedItem.title} className="w-full h-full object-cover" loading="lazy" decoding="async" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-4 left-6 right-12">
                   <span className="bg-indigo-900 text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1">{selectedItem.category}</span>

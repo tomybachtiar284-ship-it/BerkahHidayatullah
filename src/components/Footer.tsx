@@ -14,6 +14,8 @@ export default function Footer() {
                 src="/logo-resmi.png"
                 alt="Logo CV Berkah Hidayatullah"
                 className="h-16 w-auto object-contain"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <p className="text-xs leading-relaxed text-slate-400">

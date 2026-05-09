@@ -1,5 +1,5 @@
 import React, { useState, FormEvent } from 'react';
-import { Star, ShieldCheck, Wrench, Briefcase, ChevronRight, Building2, Factory, HardHat, HeartPulse, Pickaxe, Tractor, Send, Car } from 'lucide-react';
+import { Star, ShieldCheck, Wrench, Briefcase, ChevronRight, Building2, Factory, HardHat, HeartPulse, Pickaxe, Tractor, Send, Car, Mail } from 'lucide-react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
@@ -16,11 +16,19 @@ export default function Home() {
     message: ''
   });
 
-  const handleWhatsAppSubmit = (e: FormEvent) => {
-    e.preventDefault();
-    const { name, company, service, message } = formData;
-    const text = `Halo tim CV Berkah Hidayatullah,%0A%0APerkenalkan saya *${name}* dari *${company}*.%0ASaya ingin berkonsultasi mengenai layanan *${service}*.%0A%0A*Pesan / Kebutuhan:*%0A${message}`;
-    window.open(`https://wa.me/6281245613771?text=${text}`, '_blank');
+  const handleAction = (type: 'whatsapp' | 'email') => {
+    const form = document.getElementById('contactForm') as HTMLFormElement;
+    if (form && form.reportValidity()) {
+      const { name, company, service, message } = formData;
+      if (type === 'whatsapp') {
+        const text = `Halo tim CV Berkah Hidayatullah,%0A%0APerkenalkan saya *${name}* dari *${company}*.%0ASaya ingin berkonsultasi mengenai layanan *${service}*.%0A%0A*Pesan / Kebutuhan:*%0A${message}`;
+        window.open(`https://wa.me/6281245613771?text=${text}`, '_blank');
+      } else {
+        const subject = `Konsultasi Layanan: ${service} - ${company}`;
+        const body = `Halo tim CV Berkah Hidayatullah,%0D%0A%0D%0APerkenalkan saya ${name} dari ${company}.%0D%0ASaya ingin berkonsultasi mengenai layanan ${service}.%0D%0A%0D%0APesan / Kebutuhan:%0D%0A${message}%0D%0A%0D%0ATerima kasih.`;
+        window.location.href = `mailto:admin@berkahhidayatullah.com?subject=${subject}&body=${body}`;
+      }
+    }
   };
   
   const statsItems = t('home.stats.items') || [];
@@ -39,6 +47,7 @@ export default function Home() {
             src="/bg-hero.png"
             alt="Construction Background"
             className="absolute inset-0 w-full h-full object-cover opacity-20 mix-blend-luminosity hover:opacity-30 transition-opacity duration-1000"
+            fetchpriority="high"
           />
           {/* Tambahan gradient tipis agar transisi ke warna solid lebih halus */}
           <div className="absolute inset-0 bg-gradient-to-l from-transparent to-[#0082b4]/80"></div>
@@ -85,6 +94,7 @@ export default function Home() {
                   src="/hero-image.png"
                   alt="Konstruksi Gorontalo"
                   className="w-full h-full object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.4)] transform group-hover:scale-110 transition-transform duration-1000 ease-out"
+                  fetchpriority="high"
                 />
               </motion.div>
 
@@ -190,6 +200,8 @@ export default function Home() {
                     src={item.image} 
                     alt={item.title} 
                     className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
+                    loading="lazy"
+                    decoding="async"
                   />
                   <div className="absolute top-4 left-4 z-20">
                     <span className="text-[10px] font-black uppercase tracking-widest text-[#ff8a00] px-3 py-1 border border-[#ff8a00]/40 bg-slate-900/90 shadow-lg">
@@ -308,7 +320,7 @@ export default function Home() {
               return (
                 <div key={idx} className="bg-white rounded-[30px] p-6 shadow-xl border border-slate-100 hover:-translate-y-2 transition-transform duration-300">
                   <div className="rounded-2xl overflow-hidden aspect-[4/3] mb-6">
-                    <img src={images[idx]} alt={item.title} className="w-full h-full object-cover" />
+                    <img src={images[idx]} alt={item.title} className="w-full h-full object-cover" loading="lazy" decoding="async" />
                   </div>
                   <h4 className="text-lg font-bold text-slate-900 mb-2">{item.title}</h4>
                   <p className="text-xs text-slate-500 mb-6 line-clamp-2">{item.desc}</p>
@@ -483,7 +495,7 @@ export default function Home() {
           <div className="bg-white rounded-3xl p-8 sm:p-10 shadow-2xl relative">
             <div className="absolute -top-4 -right-4 w-24 h-24 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9IiNjYmQ1ZTEiLz48L3N2Zz4=')] opacity-50"></div>
             
-            <form onSubmit={handleWhatsAppSubmit} className="space-y-5 relative z-10">
+            <form id="contactForm" className="space-y-5 relative z-10" onSubmit={(e) => e.preventDefault()}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div className="space-y-1.5">
                   <label className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">{t('home.contactForm.name')}</label>
@@ -509,10 +521,16 @@ export default function Home() {
                 <textarea required rows={4} value={formData.message} onChange={(e) => setFormData({...formData, message: e.target.value})} className="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-sm text-slate-900 focus:outline-none focus:border-[#ff8a00] focus:ring-1 focus:ring-[#ff8a00] transition-all resize-none" placeholder="Tuliskan spesifikasi, jumlah, atau rincian masalah alat berat Anda..."></textarea>
               </div>
 
-              <button type="submit" className="w-full bg-[#ff8a00] hover:bg-orange-500 text-white font-bold tracking-wide py-4 rounded-lg flex items-center justify-center gap-2 transition-colors shadow-lg shadow-orange-500/20 group">
-                {t('home.contactForm.submit')}
-                <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </button>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                <button type="button" onClick={() => handleAction('whatsapp')} className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold tracking-wide py-4 rounded-lg flex items-center justify-center gap-2 transition-colors shadow-lg shadow-[#25D366]/20 group">
+                  Kirim via WhatsApp
+                  <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                </button>
+                <button type="button" onClick={() => handleAction('email')} className="w-full bg-[#0082b4] hover:bg-[#006f9a] text-white font-bold tracking-wide py-4 rounded-lg flex items-center justify-center gap-2 transition-colors shadow-lg shadow-[#0082b4]/20 group">
+                  Kirim via Email
+                  <Mail className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                </button>
+              </div>
             </form>
           </div>
         </div>
