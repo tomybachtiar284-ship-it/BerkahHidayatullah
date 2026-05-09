@@ -14,6 +14,7 @@ import { LanguageProvider } from './context/LanguageContext';
 // Lazy load halaman yang tidak dimuat saat pertama kali
 const Profile = lazy(() => import('./pages/Profile'));
 const Catalog = lazy(() => import('./pages/Catalog'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 // Fallback ringan saat halaman dimuat
 function PageLoader() {
@@ -36,6 +37,7 @@ export default function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/profile" element={<Profile />} />
                 <Route path="/catalog" element={<Catalog />} />
+                <Route path="*" element={<NotFound />} />
               </Routes>
             </Suspense>
           </main>

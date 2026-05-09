@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import IndonesiaMap from '../components/IndonesiaMap';
 import RollingCounter from '../components/RollingCounter';
+import SEO from '../components/SEO';
 
 export default function Home() {
   const { t } = useLanguage();
@@ -38,6 +39,12 @@ export default function Home() {
 
   return (
     <div className="pt-24 bg-[#eef5fa] min-h-screen font-sans">
+      <SEO 
+        title="CV Berkah Hidayatullah — Kontraktor & Supplier Profesional"
+        description="Solusi terintegrasi untuk proyek konstruksi, pemeliharaan alat berat, dan pengadaan layanan B2B di Gorontalo dan sekitarnya."
+        url="/"
+        image="https://cvberkahhidayatullah.com/hero-image.png"
+      />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden min-h-[85vh] flex items-center bg-white">

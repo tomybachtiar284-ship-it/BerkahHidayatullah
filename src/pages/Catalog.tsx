@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Package, Tractor, Hammer, Fish, Presentation, Check, X, ChevronRight, Star, Wrench, ShoppingCart } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useLanguage } from '../context/LanguageContext';
+import SEO from '../components/SEO';
 
 type FeaturedItem = {
   id: string;
@@ -62,6 +63,11 @@ export default function Catalog() {
 
   return (
     <div className="pt-20 bg-slate-50 min-h-screen">
+      <SEO 
+        title="Layanan & Katalog B2B — CV Berkah Hidayatullah"
+        description="E-katalog layanan kami mulai dari konstruksi, maintenance alat berat, pengadaan ATK, hingga perbaikan kendaraan operasional."
+        url="/catalog"
+      />
 
       {/* Page Header */}
       <div className="bg-white border-b border-slate-200 py-16">

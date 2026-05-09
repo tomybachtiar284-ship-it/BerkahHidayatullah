@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { ShieldCheck, MapPin, Target, Users } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import SEO from '../components/SEO';
 
 export default function Profile() {
   const { t } = useLanguage();
@@ -9,6 +10,12 @@ export default function Profile() {
 
   return (
     <div className="pt-20 bg-slate-50 min-h-screen pb-24">
+      <SEO 
+        title="Tentang Kami — CV Berkah Hidayatullah"
+        description="Profil perusahaan, legalitas, visi misi, dan jajaran manajemen CV Berkah Hidayatullah."
+        url="/profile"
+      />
+
       {/* Editorial Header */}
       <div className="bg-white border-b border-slate-200 py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
