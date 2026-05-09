@@ -56,6 +56,17 @@ export default function Footer() {
           <p>&copy; {new Date().getFullYear()} CV Berkah Hidayatullah. {t('footer.rights')}</p>
           <p>{t('footer.legitimacy')}: AHU-0028817-AH.01.16</p>
         </div>
+
+        <div className="mt-4 text-center">
+          <a
+            href="https://t-webdev.store/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[9px] text-slate-600 hover:text-slate-400 transition-colors tracking-widest"
+          >
+            created by t-webdev.store
+          </a>
+        </div>
       </div>
     </footer>
   );
